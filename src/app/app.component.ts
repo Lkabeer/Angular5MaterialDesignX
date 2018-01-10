@@ -6,9 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'X-Team';
-  isChecked = true;
-  
+  title: string  = 'X-Team';
+  isChecked: boolean = true;
+  radioValue: string = "";
+
   onChange($event) {
     console.log($event);
   }

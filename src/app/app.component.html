@@ -14,4 +14,15 @@
 
   <div *ngIf="showDetails.checked">Some Details ...</div>
 
+  
+  <mat-radio-group [(ngModel)]="radioValue">
+    <mat-radio-button value="male">Male</mat-radio-button>
+    <mat-radio-button 
+      value="female"
+      [checked]="isChecked"
+      >Female</mat-radio-button>
+  </mat-radio-group>
+
+  <div> Radio Button is: {{ radioValue }}</div>
+
 <router-outlet></router-outlet>
