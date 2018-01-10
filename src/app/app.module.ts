@@ -6,7 +6,8 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 import { 
   MatCheckboxModule,
-  MatRadioModule 
+  MatRadioModule,
+  MatSelectModule
 } from '@angular/material';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -24,7 +25,8 @@ import { AppComponent } from './app.component';
     FormsModule,
     BrowserAnimationsModule,
     MatCheckboxModule,
-    MatRadioModule
+    MatRadioModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
