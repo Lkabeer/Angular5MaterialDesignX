@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -29,4 +30,9 @@ export class AppComponent {
   onChange($event) {
     console.log($event);
   }
+
+  emailFormControl = new FormControl('', [
+    Validators.required,
+    Validators.email
+  ]);
 }
