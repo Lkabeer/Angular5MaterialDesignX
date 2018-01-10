@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
+import { Observable } from "rxjs/Observable";
+import 'rxjs/add/observable/timer';
 
 @Component({
   selector: 'app-root',
@@ -65,5 +67,17 @@ export class AppComponent {
       .forEach(c => c['selected'] = false);
 
       category.selected = !category.selected;
+  }
+
+  isLoading = false;
+
+  constructor() {
+    this.isLoading = true;
+    this.getCourses()
+      .subscribe(x => this.isLoading = false);
+  }
+
+  getCourses() {
+    return Observable.timer(2000);
   }
 }

@@ -130,4 +130,12 @@
   </mat-chip>
 </mat-chip-list>
 <!-- Chips End -->
+
+<!-- Progress Spinner Start -->
+<mat-spinner
+  *ngIf = "isLoading"
+  mode="indetermine">
+</mat-spinner>
+<!-- Progress Spinner End -->
+
 <router-outlet></router-outlet>

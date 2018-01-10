@@ -13,7 +13,8 @@ import {
   MatDatepickerModule,
   MatNativeDateModule,
   MatButtonModule,
-  MatChipsModule
+  MatChipsModule,
+  MatProgressSpinnerModule
 } from '@angular/material';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -39,7 +40,8 @@ import { AppComponent } from './app.component';
     MatDatepickerModule,
     MatNativeDateModule,
     MatButtonModule,
-    MatChipsModule
+    MatChipsModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
