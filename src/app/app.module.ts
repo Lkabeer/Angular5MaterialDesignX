@@ -14,7 +14,8 @@ import {
   MatNativeDateModule,
   MatButtonModule,
   MatChipsModule,
-  MatProgressSpinnerModule
+  MatProgressSpinnerModule,
+  MatTooltipModule
 } from '@angular/material';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -41,7 +42,8 @@ import { AppComponent } from './app.component';
     MatNativeDateModule,
     MatButtonModule,
     MatChipsModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]
