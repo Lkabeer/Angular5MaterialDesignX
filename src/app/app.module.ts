@@ -11,7 +11,8 @@ import {
   MatInputModule,
   MatIconModule,
   MatDatepickerModule,
-  MatNativeDateModule
+  MatNativeDateModule,
+  MatButtonModule
 } from '@angular/material';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -35,7 +36,8 @@ import { AppComponent } from './app.component';
     MatInputModule,
     MatIconModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
