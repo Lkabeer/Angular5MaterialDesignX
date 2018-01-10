@@ -9,7 +9,9 @@ import {
   MatRadioModule,
   MatSelectModule,
   MatInputModule,
-  MatIconModule
+  MatIconModule,
+  MatDatepickerModule,
+  MatNativeDateModule
 } from '@angular/material';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -31,7 +33,9 @@ import { AppComponent } from './app.component';
     MatRadioModule,
     MatSelectModule,
     MatInputModule,
-    MatIconModule
+    MatIconModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent]

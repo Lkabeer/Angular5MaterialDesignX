@@ -25,7 +25,18 @@ export class AppComponent {
       name: 'Tacos',
       price: 10
     },
-  ]
+  ];
+
+  minDate = new Date(2018, 0, 1);
+  maxDate = new Date(2018, 1, 1);
+
+  myFilter = (d: Date): boolean => {
+    const day = d.getDay();
+      // Prevent Saturday and Sunday from being selected.    
+    return day !== 0 && day !== 6;
+  }
+
+  dateControl = new FormControl(new Date());
 
   onChange($event) {
     console.log($event);
