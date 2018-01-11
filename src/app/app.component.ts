@@ -84,7 +84,9 @@ export class AppComponent {
   }
 
   openDialog() {
-    this.diaglog.open(EditCourseComponent)
+    this.diaglog.open(EditCourseComponent, {
+      data: { name: 'Ahmed' },
+    })
       .afterClosed()
       .subscribe(result => console.log(result));
   }
