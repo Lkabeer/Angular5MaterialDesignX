@@ -179,4 +179,49 @@
 </form>
 <!-- AutoComplete End -->
 
+<!-- Menu Start -->
+<button
+  mat-raised-button
+  color="primary"
+  [matMenuTriggerFor]="menu">
+  Menu
+</button>
+
+<mat-menu #menu="matMenu">
+  <button
+    mat-menu-item
+    [matMenuTriggerFor]="sub1">
+    <mat-icon>dialpad</mat-icon>
+    <span>SubMenu 1</span>
+  </button>
+  <button 
+    mat-menu-item>
+    <mat-icon>voicemail</mat-icon>
+    <span> SubMenu 2</span>
+  </button>
+</mat-menu>
+
+<mat-menu #sub1="matMenu">
+  <button
+    mat-menu-item
+    [matMenuTriggerFor]="sub1Sub1">
+    <mat-icon>notifications_off</mat-icon>
+    <span>Sub1 Sub1</span>
+  </button>
+  <button 
+    mat-menu-item>
+    Sub1 Sub2
+  </button>
+</mat-menu>
+
+<mat-menu #sub1Sub1="matMenu">
+  <button mat-menu-item>
+    Sub1 Sub1 Sub1
+  </button>
+  <button mat-menu-item>
+    Sub1 Sub1 Sub2
+  </button>
+</mat-menu>
+<!-- Menu End -->
+
 <router-outlet></router-outlet>
