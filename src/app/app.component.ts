@@ -3,6 +3,8 @@ import { Component } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { Observable } from "rxjs/Observable";
 import 'rxjs/add/observable/timer';
+import { startWith } from "rxjs/operators/startWith";
+import { map } from "rxjs/operators/map";
 import { MatDialog } from '@angular/material';
 
 @Component({
@@ -89,5 +91,28 @@ export class AppComponent {
     })
       .afterClosed()
       .subscribe(result => console.log(result));
+  }
+
+  autocompleteControl: FormControl = new FormControl();
+
+  options = [
+    'one',
+    'two',
+    'three'
+  ];
+
+  filteredOptions: Observable<string[]>;
+
+  ngOnInit() {
+    this.filteredOptions = this.autocompleteControl.valueChanges
+      .pipe(
+      startWith(''),
+      map(val => this.filter(val))
+      );
+  }
+
+  filter(val: string): string[] {
+    return this.options.filter(option =>
+      option.toLowerCase().indexOf(val.toLowerCase()) === 0);
   }
 }
