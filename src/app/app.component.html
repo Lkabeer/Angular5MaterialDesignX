@@ -226,7 +226,7 @@
 
 <!-- sideNav start -->
 <mat-drawer-container class="example-container" autosize>
-  <mat-drawer class="example-sidenav" #drawer mode="over">
+  <mat-drawer class="example-sidenav" #drawer mode="overx">
     <p>Auto-resizing sidenav</p>
     <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam blanditiis autem veniam aliquam officia, commodi quasi inventore nulla porro eveniet esse cumque tempora doloremque ea non id aliquid harum odio!</p>
     <button (click)="showFiller = !showFiller" mat-raised-button>
@@ -241,4 +241,33 @@
   </div>
 </mat-drawer-container>
 <!-- sideNav start -->
+
+<!-- Toolbar Start -->
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>X-Team</span>
+    <span class="example-spacer"></span>
+    <mat-icon class="example-icon">favorite</mat-icon>
+    <mat-icon class="example-icon">delete</mat-icon>
+  </mat-toolbar-row>
+</mat-toolbar>
+<!-- Toolbar End -->
+
+<!-- List Start -->
+<mat-list>
+  <h3 mat-subheader>Folders</h3>
+  <mat-list-item *ngFor="let folder of folders">
+    <mat-icon mat-list-icon>folder</mat-icon>
+    <h4 mat-line>{{folder.name}}</h4>
+    <p mat-line>{{folder.updated | date}}</p>
+  </mat-list-item>
+  <mat-divider></mat-divider>
+  <h3 mat-subheader>Notes</h3>
+  <mat-list-item *ngFor="let note of notes">
+    <mat-icon mat-list-icon>note</mat-icon>
+    <h4 mat-line>{{note.name}}</h4>
+    <p mat-line> {{note.updated | date}} </p>
+  </mat-list-item>
+</mat-list>
+<!-- List End -->
 <router-outlet></router-outlet>
