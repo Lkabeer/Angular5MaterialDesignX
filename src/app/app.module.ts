@@ -16,17 +16,23 @@ import {
   MatChipsModule,
   MatProgressSpinnerModule,
   MatTooltipModule,
-  MatTabsModule
+  MatTabsModule,
+  MatDialogModule
 } from '@angular/material';
 
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
+import { EditCourseComponent } from './edit-course/edit-course.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    EditCourseComponent
+  ],
+  entryComponents: [
+    EditCourseComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +51,8 @@ import { AppComponent } from './app.component';
     MatChipsModule,
     MatProgressSpinnerModule,
     MatTooltipModule,
-    MatTabsModule
+    MatTabsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
