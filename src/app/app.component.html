@@ -224,4 +224,21 @@
 </mat-menu>
 <!-- Menu End -->
 
+<!-- sideNav start -->
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer class="example-sidenav" #drawer mode="over">
+    <p>Auto-resizing sidenav</p>
+    <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam blanditiis autem veniam aliquam officia, commodi quasi inventore nulla porro eveniet esse cumque tempora doloremque ea non id aliquid harum odio!</p>
+    <button (click)="showFiller = !showFiller" mat-raised-button>
+      Toggle Extra text
+    </button>
+  </mat-drawer>
+
+  <div class="example-sidenav-content">
+    <button mat-raised-button color="primary" (click)="drawer.toggle()">
+      Toggle SideNav
+    </button>
+  </div>
+</mat-drawer-container>
+<!-- sideNav start -->
 <router-outlet></router-outlet>

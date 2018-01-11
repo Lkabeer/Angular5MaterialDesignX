@@ -115,4 +115,6 @@ export class AppComponent {
     return this.options.filter(option =>
       option.toLowerCase().indexOf(val.toLowerCase()) === 0);
   }
+
+  showFiller = false;
 }
